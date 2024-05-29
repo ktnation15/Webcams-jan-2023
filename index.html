@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcam Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Brand</th>
+                    <th>Height</th>
+                    <th>Width</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(webcam, index) in webcams" :key="webcam.Id">
+                    <td>{{ webcam.Id }}</td>
+                    <td>{{ webcam.Brand }}</td>
+                    <td>{{ webcam.Height }}</td>
+                    <td>{{ webcam.Width }}</td>
+                    <td><button @click="deleteWebcam(index)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <input v-model="newWebcam.Id" placeholder="Id">
+        <input v-model="newWebcam.Brand" placeholder="Brand">
+        <input v-model="newWebcam.Height" placeholder="Height">
+        <input v-model="newWebcam.Width" placeholder="Width">
+        <button @click="addWebcam">Add Webcam</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                webcams: [
+                    {Id: '1', Brand: 'Logitech', Height: 720, Width: 1280},
+                    {Id: '2', Brand: 'Microsoft', Height: 1080, Width: 1920},
+                    {Id: '3', Brand: 'Sony', Height: 720, Width: 1280},
+                    {Id: '4', Brand: 'HP', Height: 1080, Width: 1920},
+                    {Id: '5', Brand: 'Dell', Height: 720, Width: 1280}
+                ],
+                newWebcam: {Id: '', Brand: '', Height: '', Width: ''}
+            },
+            methods: {
+                addWebcam: function() {
+                    this.webcams.push(this.newWebcam);
+                    this.newWebcam = {Id: '', Brand: '', Height: '', Width: ''};
+                },
+                deleteWebcam: function(index) {
+                    this.webcams.splice(index, 1);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
