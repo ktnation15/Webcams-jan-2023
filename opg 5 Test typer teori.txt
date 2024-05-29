@@ -1,0 +1,35 @@
+Her er en kort beskrivelse af de forskellige testtyper og hvilke slags fejl de tester for:
+
+1. Unit Test af Model klasser:
+   Formål: Tester individuelle enheder af koden, såsom modelklasser, for at sikre, at hver enkelt funktion fungerer korrekt.
+   Hvilke slags fejl:
+    - Logiske fejl i modelens metoder
+    - Fejl i datahåndtering
+    - Fejl i attributternes værdier og typer
+    Eksempel: Sikre at en metode til at beregne en rabat på en vare returnerer de forventede resultater.
+
+2. Unit Test af Manager klasser (i en REST service):
+    Formål: Tester funktionerne i managerklasser, som håndterer logikken og interaktionerne med databasen eller andre tjenester inden for en REST-service.
+     slags fejl:
+        - Logiske fejl i forretningslogik
+        - Fejl i interaktioner med databasen
+        - Fejl i data transformationsprocesser
+    Eksempel: Sikre at en metode til at oprette en ny bruger korrekt gemmer brugeren i databasen og returnerer de korrekte data.
+
+3. Postman Test af REST API:
+    Formål: Tester REST API-endepunkter ved at sende HTTP-forespørgsler og validere svarene.
+    Hvilke slags fejl:
+        - Fejl i API-ruternes funktionalitet
+        - Fejl i håndtering af HTTP-anmodninger og svar
+        - Sikkerhedsfejl som f.eks. utilstrækkelig inputvalidering
+    Eksempel: Sikre at en GET-anmodning til /users returnerer en liste over brugere med den korrekte statuskode og datastruktur.
+4. UI Test:
+    Formål: Tester brugergrænsefladen for at sikre, at brugerne kan interagere med applikationen som forventet.
+    Hvilke slags fejl:
+        - Fejl i UI-komponenters funktionalitet
+        - Fejl i layout og visning
+        - Fejl i brugerinteraktioner (f.eks. knapklik, formularindsendelser)
+    Eksempel: Sikre at en knap tilføjer en ny vare til indkøbskurven og at kurven opdateres korrekt på skærmen.
+
+Disse tests er essentielle for at sikre, at forskellige dele af applikationen fungerer korrekt og samarbejder effektivt, 
+hvilket fører til en robust og fejlresistent applikation.

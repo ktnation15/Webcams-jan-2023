@@ -1,4 +1,10 @@
 Lav din TCP server concurrent
 - Forklar hvad det betyder, at en server er concurrent og hvad det giver af fordele?
 
-En konkurrerende server kan håndtere flere klienter samtidigt, hvilket giver bedre ydeevne, højere skalerbarhed, mere effektiv ressourceudnyttelse, forbedret brugeroplevelse og bedre robusthed.
+En konkurrerende server kan:
+- håndtere flere klienter samtidigt, 
+- hvilket giver bedre ydeevne, 
+- højere skalerbarhed, 
+- mere effektiv ressourceudnyttelse, 
+- forbedret brugeroplevelse 
+- og bedre robusthed.
